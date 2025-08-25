@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Jared's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google Font for the pixel art style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,21 +20,55 @@
         <main class="avatar-selection">
             <!-- Computer Science Avatar Button -->
             <div class="avatar-card" id="cs-resume-btn">
-                <img 
-                    src="assets/images/cs_avatar.png" 
-                    alt="Computer Science Avatar" 
-                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/000000/FFFFFF?text=CS+Avatar';"
-                >
+                <!-- START: Animated CS Avatar SVG -->
+                <div class="avatar-container">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="pixel-avatar">
+                        <!-- Head -->
+                        <rect x="35" y="20" width="30" height="30" fill="#f2d5ab"/>
+                        <!-- Hair -->
+                        <rect x="35" y="15" width="30" height="10" fill="#3d2314"/>
+                        <rect x="30" y="20" width="5" height="5" fill="#3d2314"/>
+                        <rect x="65" y="20" width="5" height="5" fill="#3d2314"/>
+                        <!-- Eyes -->
+                        <rect x="42" y="30" width="5" height="5" fill="#ffffff"/>
+                        <rect x="53" y="30" width="5" height="5" fill="#ffffff"/>
+                        <!-- Body -->
+                        <rect x="25" y="50" width="50" height="30" fill="#2a2a2a"/>
+                        <!-- Laptop -->
+                        <g class="laptop">
+                            <rect x="30" y="60" width="40" height="25" fill="#c0c0c0"/>
+                            <rect class="laptop-screen" x="32" y="62" width="36" height="18" fill="#00ff00"/>
+                        </g>
+                    </svg>
+                </div>
+                <!-- END: Animated CS Avatar SVG -->
                 <h2>Computer Science</h2>
             </div>
             
             <!-- CNA Avatar Button -->
             <div class="avatar-card" id="cna-resume-btn">
-                <img 
-                    src="assets/images/cna_avatar.png" 
-                    alt="CNA Avatar"
-                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/4a8af4/FFFFFF?text=CNA+Avatar';"
-                >
+                 <!-- START: Animated CNA Avatar SVG -->
+                 <div class="avatar-container">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="pixel-avatar">
+                        <!-- Head -->
+                        <rect x="35" y="20" width="30" height="30" fill="#f2d5ab"/>
+                        <!-- Hair -->
+                        <rect x="35" y="15" width="30" height="10" fill="#3d2314"/>
+                        <rect x="30" y="20" width="5" height="5" fill="#3d2314"/>
+                        <rect x="65" y="20" width="5" height="5" fill="#3d2314"/>
+                        <!-- Eyes -->
+                        <rect x="42" y="30" width="5" height="5" fill="#ffffff"/>
+                        <rect x="53" y="30" width="5" height="5" fill="#ffffff"/>
+                        <!-- Scrubs Body -->
+                        <rect x="25" y="50" width="50" height="35" fill="#4a8af4"/>
+                        <!-- Medical Cross -->
+                        <g class="medical-cross">
+                            <rect x="47" y="55" width="6" height="18" fill="#ffffff"/>
+                            <rect x="41" y="61" width="18" height="6" fill="#ffffff"/>
+                        </g>
+                    </svg>
+                </div>
+                <!-- END: Animated CNA Avatar SVG -->
                 <h2>Nursing (CNA)</h2>
             </div>
         </main>

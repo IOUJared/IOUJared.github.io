@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -50,14 +51,26 @@ header h1 {
     box-shadow: none;
 }
 
-.avatar-card img {
+/* NEW: Container for the SVG to manage sizing and animations */
+.avatar-container {
     width: 200px;
     height: 200px;
     border: 4px solid #000000;
+    background-color: #1e1e1e; /* Dark background for the avatar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* This ensures images have sharp, pixelated edges and don't look blurry */
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+}
+
+.pixel-avatar {
+    width: 100%;
+    height: 100%;
+    /* This is our idle animation! */
+    animation: float 3s ease-in-out infinite;
 }
 
 .avatar-card h2 {
@@ -65,6 +78,47 @@ header h1 {
     font-size: 1.2rem;
     color: #ffffff;
 }
+
+/* --- NEW ANIMATION STYLES --- */
+
+/* Keyframes for the idle floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Keyframes for the CS avatar's laptop screen flicker on hover */
+@keyframes flicker {
+    0% { fill: #00ff00; }
+    50% { fill: #33ff33; }
+    100% { fill: #00dd00; }
+}
+
+/* Keyframes for the CNA avatar's cross pulse on hover */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* Applying the hover animations */
+#cs-resume-btn:hover .laptop-screen {
+    animation: flicker 0.5s infinite;
+}
+
+#cna-resume-btn:hover .medical-cross {
+    /* We need to set the origin for the pulse effect to be the center */
+    transform-origin: center;
+    animation: pulse 1s infinite;
+}
+
 
 /* Styling for the PDF viewer page */
 .pdf-viewer-body {
