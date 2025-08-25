@@ -8,33 +8,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const { adventurer } = window.DiceBearAdventurer;
 
     // --- Create the Computer Science Avatar ---
+    // Based on: bald, white male, lean, tech profession clothes
 
     const csAvatar = createAvatar(adventurer, {
-        seed: 'jared-cs', // A unique name to generate a consistent avatar
-        // Customizations to look like a programmer
-        glasses: ['variant01'],
+        seed: 'jared-cs-professional', // A unique name for consistency
+        skinColor: ['f2d5ab'],
+        hair: ['short18'], // This is the closest style to bald (a buzz cut)
+        hairProbability: 100,
+        glasses: ['variant01'], // Glasses for the tech look
         glassesProbability: 100,
-        hair: ['short01'],
-        features: ['hat'],
-        featuresProbability: 100,
+        mouth: ['variant09'], // A neutral, focused expression
+        // The 'adventurer' style doesn't have hoodies, but we can imply a dark shirt
+        // by setting a specific background color for the character sprite itself.
+        backgroundColor: ['555555', '333333'], // Shades of grey for a hoodie/dark shirt
     }).toDataUriSync();
 
     // --- Create the CNA (Nursing) Avatar ---
+    // Based on: bald, white male, lean, nursing profession clothes
 
     const cnaAvatar = createAvatar(adventurer, {
-        seed: 'jared-cna', // A different seed for a different avatar
-        // Customizations to look like a nursing professional
-        hair: ['short04'],
-        earrings: ['variant01'],
-        earringsProbability: 100,
-        features: ['blush'],
-        featuresProbability: 100,
-        mouth: ['variant01'], // Gives a slight smile
+        seed: 'jared-cna-professional', // A different seed for consistency
+        skinColor: ['f2d5ab'],
+        hair: ['short18'], // Matching buzz cut for bald look
+        hairProbability: 100,
+        mouth: ['variant01'], // A friendly, caring smile
+        // We'll use the background color to represent teal scrubs
+        backgroundColor: ['2d7c7f', '1e5254'], 
     }).toDataUriSync();
 
     // --- Place Avatars on the Page ---
 
-    // Find the avatar containers in the HTML
     const csAvatarContainer = document.getElementById('cs-avatar');
     const cnaAvatarContainer = document.getElementById('cna-avatar');
 

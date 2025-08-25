@@ -54,9 +54,10 @@ header h1 {
     width: 200px;
     height: 200px;
     border: 4px solid #000000;
-    background-color: #5a81ad; /* A nice sky-blue background */
+    /* This background provides a nice frame if the avatar takes a moment to load */
+    background-color: #1e1e1e; 
     
-    /* NEW: Styling for the generated avatar image */
+    /* Styling for the generated avatar image */
     background-size: 180%; /* Zoom in on the avatar */
     background-position: center 30%; /* Position it nicely */
     
@@ -65,12 +66,12 @@ header h1 {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 
-    /* NEW: Idle and Hover animations are now on the container */
+    /* Idle and Hover animations are on the container */
     animation: float 3s ease-in-out infinite;
     transition: transform 0.2s ease-in-out;
 }
 
-/* NEW: A simple, clean hover effect for the new avatars */
+/* A simple, clean hover effect for the new avatars */
 .avatar-card:hover .avatar-container {
     transform: scale(1.05); /* Slightly enlarge the avatar on hover */
 }
@@ -95,18 +96,8 @@ header h1 {
 }
 
 /* Styling for the PDF viewer page */
-.pdf-viewer-body {
-    display: block;
-}
-
-#pdf-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
+.pdf-viewer-body { display: block; }
+#pdf-container { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; }
 .back-button {
     position: fixed;
     top: 20px;
@@ -120,9 +111,5 @@ header h1 {
     box-shadow: 4px 4px 0 #000000;
     transition: all 0.1s ease-in-out;
 }
-
-.back-button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #000000;
-}
+.back-button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000000; }
 

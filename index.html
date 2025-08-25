@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Jared's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Font for the pixel art style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -17,21 +18,29 @@
         </header>
         
         <main class="avatar-selection">
+            <!-- Computer Science Avatar Button -->
             <div class="avatar-card" id="cs-resume-btn">
+                <!-- This container will be filled by our JavaScript -->
                 <div class="avatar-container" id="cs-avatar"></div>
                 <h2>Computer Science</h2>
             </div>
             
+            <!-- CNA Avatar Button -->
             <div class="avatar-card" id="cna-resume-btn">
+                <!-- This container will also be filled by our JavaScript -->
                 <div class="avatar-container" id="cna-avatar"></div>
                 <h2>Nursing (CNA)</h2>
             </div>
         </main>
     </div>
 
+    <!-- 
+      DiceBear library scripts. These must be included for the avatars to generate.
+    -->
     <script src="https://cdn.jsdelivr.net/npm/@dicebear/core/dist/umd/core.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@dicebear/adventurer/dist/umd/index.min.js"></script>
 
+    <!-- Linking to our custom JavaScript file -->
     <script src="js/main.js"></script>
 
 </body>
