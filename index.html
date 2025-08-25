@@ -18,81 +18,21 @@
         
         <main class="avatar-selection">
             <div class="avatar-card" id="cs-resume-btn">
-                <div class="avatar-container">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="pixel-avatar">
-                        <g class="head">
-                            <rect x="36" y="24" width="28" height="28" class="skin" />
-                            <rect x="32" y="32" width="4" height="4" class="skin" />
-                            <rect x="64" y="32" width="4" height="4" class="skin" />
-                        </g>
-                        <g class="hair">
-                            <path d="M36,16 h28 v8 h4 v4 h-4 v4 h-4 v-4 h-20 v4 h-4 v-4 h-4 v-4 h4z" />
-                        </g>
-                        <g class="eyes">
-                            <rect x="40" y="32" width="8" height="8" class="white" />
-                            <rect x="52" y="32" width="8" height="8" class="white" />
-                            <path d="M36,32 h28 v8 h-4 v-4 h-20 v4 h-4z" class="black" />
-                        </g>
-                        <g class="body">
-                             <path d="M28,52 h44 v4 h-4 v24 h-36 v-24 h-4z" class="shirt" />
-                             <rect x="44" y="52" width="12" height="12" class="skin" />
-                        </g>
-                        <g class="laptop">
-                            <path d="M24,72 h52 v4 h-52z" class="grey" />
-                            <path d="M32,60 h36 v12 h-36z" class="grey" />
-                            <rect x="34" y="62" width="32" height="8" class="laptop-screen" />
-                        </g>
-                    </svg>
-                    </div>
+                <div class="avatar-container" id="cs-avatar"></div>
                 <h2>Computer Science</h2>
             </div>
             
             <div class="avatar-card" id="cna-resume-btn">
-                 <div class="avatar-container">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="pixel-avatar">
-                        <g class="head">
-                           <rect x="36" y="24" width="28" height="28" class="skin" />
-                           <rect x="32" y="32" width="4" height="4" class="skin" />
-                           <rect x="64" y="32" width="4" height="4" class="skin" />
-                        </g>
-                        <g class="hair">
-                            <path d="M36,16 h28 v8 h4 v12 h-4 v-8 h-28z M32,24 h4 v12 h-4z" />
-                            <rect x="48" y="12" width="4" height="4" />
-                        </g>
-                        <g class="eyes">
-                            <rect x="40" y="32" width="8" height="8" class="white" />
-                            <rect x="52" y="32" width="8" height="8" class="white" />
-                        </g>
-                        <g class="body">
-                             <path d="M28,52 h44 v32 h-44z" class="scrubs" />
-                             <path d="M44,52 h12 v12 h4 v-12 h4 v4 h-20 v-4 h4z" class="skin" />
-                             <path d="M44,52 h-4 v-4 h20 v4 h-4 v12 h-12z" class="scrubs-trim" />
-                        </g>
-                        <g class="medical-cross">
-                            <rect x="34" y="58" width="4" height="12" class="white" />
-                            <rect x="30" y="62" width="12" height="4" class="white" />
-                        </g>
-                    </svg>
-                    </div>
+                <div class="avatar-container" id="cna-avatar"></div>
                 <h2>Nursing (CNA)</h2>
             </div>
         </main>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const csButton = document.getElementById('cs-resume-btn');
-            const cnaButton = document.getElementById('cna-resume-btn');
+    <script src="https://cdn.jsdelivr.net/npm/@dicebear/core/dist/umd/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@dicebear/adventurer/dist/umd/index.min.js"></script>
 
-            csButton.addEventListener('click', () => {
-                window.location.href = 'resume.html?pdf=cs_resume';
-            });
-
-            cnaButton.addEventListener('click', () => {
-                window.location.href = 'resume.html?pdf=cna_resume';
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
