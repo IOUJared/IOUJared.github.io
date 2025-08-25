@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font for the pixel art style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Choose a Path</h1>
+        </header>
+        
+        <main class="avatar-selection">
+            <!-- Computer Science Avatar Button -->
+            <div class="avatar-card" id="cs-resume-btn">
+                <img 
+                    src="assets/images/cs_avatar.png" 
+                    alt="Computer Science Avatar" 
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/000000/FFFFFF?text=CS+Avatar';"
+                >
+                <h2>Computer Science</h2>
+            </div>
+            
+            <!-- CNA Avatar Button -->
+            <div class="avatar-card" id="cna-resume-btn">
+                <img 
+                    src="assets/images/cna_avatar.png" 
+                    alt="CNA Avatar"
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/4a8af4/FFFFFF?text=CNA+Avatar';"
+                >
+                <h2>Nursing (CNA)</h2>
+            </div>
+        </main>
+    </div>
+
+    <!-- The script is deferred to load after the HTML content -->
+    <script>
+        // Wait for the document to be fully loaded before running the script
+        document.addEventListener('DOMContentLoaded', () => {
+            const csButton = document.getElementById('cs-resume-btn');
+            const cnaButton = document.getElementById('cna-resume-btn');
+
+            // Event listener for the Computer Science button
+            csButton.addEventListener('click', () => {
+                // Opens the resume viewer page with a parameter to specify the CS PDF
+                window.location.href = 'resume.html?pdf=cs_resume';
+            });
+
+            // Event listener for the CNA button
+            cnaButton.addEventListener('click', () => {
+                // Opens the resume viewer page with a parameter to specify the CNA PDF
+                window.location.href = 'resume.html?pdf=cna_resume';
+            });
+        });
+    </script>
+
+</body>
+</html>
+

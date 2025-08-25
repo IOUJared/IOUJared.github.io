@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font for the pixel art style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="pdf-viewer-body">
+
+    <!-- This container will hold the PDF embed -->
+    <div id="pdf-container">
+        <!-- The back button will be styled to fit the theme -->
+        <a href="index.html" class="back-button">Back</a>
+        <!-- The PDF will be embedded here by the script -->
+    </div>
+
+    <script>
+        // This script runs as soon as the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const pdfContainer = document.getElementById('pdf-container');
+            
+            // Get the URL parameters to figure out which PDF to show
+            const params = new URLSearchParams(window.location.search);
+            const pdfName = params.get('pdf'); // This will be 'cs_resume' or 'cna_resume'
+
+            if (pdfName) {
+                // Create an <embed> element to display the PDF
+                const pdfEmbed = document.createElement('embed');
+                pdfEmbed.src = `assets/pdfs/${pdfName}.pdf`;
+                pdfEmbed.type = 'application/pdf';
+                pdfEmbed.width = '100%';
+                pdfEmbed.height = '100%';
+
+                // Add the embed element to the container
+                pdfContainer.appendChild(pdfEmbed);
+            } else {
+                // If no PDF is specified, show an error message
+                pdfContainer.innerHTML += '<p>Error: PDF not found. Please go back and select a resume.</p>';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
