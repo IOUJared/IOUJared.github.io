@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jared's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Font for the pixel art style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,78 +17,78 @@
         </header>
         
         <main class="avatar-selection">
-            <!-- Computer Science Avatar Button -->
             <div class="avatar-card" id="cs-resume-btn">
-                <!-- START: Animated CS Avatar SVG -->
                 <div class="avatar-container">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="pixel-avatar">
-                        <!-- Head -->
-                        <rect x="35" y="20" width="30" height="30" fill="#f2d5ab"/>
-                        <!-- Hair -->
-                        <rect x="35" y="15" width="30" height="10" fill="#3d2314"/>
-                        <rect x="30" y="20" width="5" height="5" fill="#3d2314"/>
-                        <rect x="65" y="20" width="5" height="5" fill="#3d2314"/>
-                        <!-- Eyes -->
-                        <rect x="42" y="30" width="5" height="5" fill="#ffffff"/>
-                        <rect x="53" y="30" width="5" height="5" fill="#ffffff"/>
-                        <!-- Body -->
-                        <rect x="25" y="50" width="50" height="30" fill="#2a2a2a"/>
-                        <!-- Laptop -->
+                        <g class="head">
+                            <rect x="36" y="24" width="28" height="28" class="skin" />
+                            <rect x="32" y="32" width="4" height="4" class="skin" />
+                            <rect x="64" y="32" width="4" height="4" class="skin" />
+                        </g>
+                        <g class="hair">
+                            <path d="M36,16 h28 v8 h4 v4 h-4 v4 h-4 v-4 h-20 v4 h-4 v-4 h-4 v-4 h4z" />
+                        </g>
+                        <g class="eyes">
+                            <rect x="40" y="32" width="8" height="8" class="white" />
+                            <rect x="52" y="32" width="8" height="8" class="white" />
+                            <path d="M36,32 h28 v8 h-4 v-4 h-20 v4 h-4z" class="black" />
+                        </g>
+                        <g class="body">
+                             <path d="M28,52 h44 v4 h-4 v24 h-36 v-24 h-4z" class="shirt" />
+                             <rect x="44" y="52" width="12" height="12" class="skin" />
+                        </g>
                         <g class="laptop">
-                            <rect x="30" y="60" width="40" height="25" fill="#c0c0c0"/>
-                            <rect class="laptop-screen" x="32" y="62" width="36" height="18" fill="#00ff00"/>
+                            <path d="M24,72 h52 v4 h-52z" class="grey" />
+                            <path d="M32,60 h36 v12 h-36z" class="grey" />
+                            <rect x="34" y="62" width="32" height="8" class="laptop-screen" />
                         </g>
                     </svg>
-                </div>
-                <!-- END: Animated CS Avatar SVG -->
+                    </div>
                 <h2>Computer Science</h2>
             </div>
             
-            <!-- CNA Avatar Button -->
             <div class="avatar-card" id="cna-resume-btn">
-                 <!-- START: Animated CNA Avatar SVG -->
                  <div class="avatar-container">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="pixel-avatar">
-                        <!-- Head -->
-                        <rect x="35" y="20" width="30" height="30" fill="#f2d5ab"/>
-                        <!-- Hair -->
-                        <rect x="35" y="15" width="30" height="10" fill="#3d2314"/>
-                        <rect x="30" y="20" width="5" height="5" fill="#3d2314"/>
-                        <rect x="65" y="20" width="5" height="5" fill="#3d2314"/>
-                        <!-- Eyes -->
-                        <rect x="42" y="30" width="5" height="5" fill="#ffffff"/>
-                        <rect x="53" y="30" width="5" height="5" fill="#ffffff"/>
-                        <!-- Scrubs Body -->
-                        <rect x="25" y="50" width="50" height="35" fill="#4a8af4"/>
-                        <!-- Medical Cross -->
+                        <g class="head">
+                           <rect x="36" y="24" width="28" height="28" class="skin" />
+                           <rect x="32" y="32" width="4" height="4" class="skin" />
+                           <rect x="64" y="32" width="4" height="4" class="skin" />
+                        </g>
+                        <g class="hair">
+                            <path d="M36,16 h28 v8 h4 v12 h-4 v-8 h-28z M32,24 h4 v12 h-4z" />
+                            <rect x="48" y="12" width="4" height="4" />
+                        </g>
+                        <g class="eyes">
+                            <rect x="40" y="32" width="8" height="8" class="white" />
+                            <rect x="52" y="32" width="8" height="8" class="white" />
+                        </g>
+                        <g class="body">
+                             <path d="M28,52 h44 v32 h-44z" class="scrubs" />
+                             <path d="M44,52 h12 v12 h4 v-12 h4 v4 h-20 v-4 h4z" class="skin" />
+                             <path d="M44,52 h-4 v-4 h20 v4 h-4 v12 h-12z" class="scrubs-trim" />
+                        </g>
                         <g class="medical-cross">
-                            <rect x="47" y="55" width="6" height="18" fill="#ffffff"/>
-                            <rect x="41" y="61" width="18" height="6" fill="#ffffff"/>
+                            <rect x="34" y="58" width="4" height="12" class="white" />
+                            <rect x="30" y="62" width="12" height="4" class="white" />
                         </g>
                     </svg>
-                </div>
-                <!-- END: Animated CNA Avatar SVG -->
+                    </div>
                 <h2>Nursing (CNA)</h2>
             </div>
         </main>
     </div>
 
-    <!-- The script is deferred to load after the HTML content -->
     <script>
-        // Wait for the document to be fully loaded before running the script
         document.addEventListener('DOMContentLoaded', () => {
             const csButton = document.getElementById('cs-resume-btn');
             const cnaButton = document.getElementById('cna-resume-btn');
 
-            // Event listener for the Computer Science button
             csButton.addEventListener('click', () => {
-                // Opens the resume viewer page with a parameter to specify the CS PDF
                 window.location.href = 'resume.html?pdf=cs_resume';
             });
 
-            // Event listener for the CNA button
             cnaButton.addEventListener('click', () => {
-                // Opens the resume viewer page with a parameter to specify the CNA PDF
                 window.location.href = 'resume.html?pdf=cna_resume';
             });
         });
