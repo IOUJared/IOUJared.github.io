@@ -1,10 +1,11 @@
-// --- Step 1: Import using the correct, version-specific CDN URLs ---
-// These are the working links you provided.
+// --- Step 1: Import using the correct, full CDN URLs ---
+// This tells the browser exactly where to download the code from.
 import { createAvatar } from 'https://cdn.jsdelivr.net/npm/@dicebear/core@9.2.4/lib/index.min.js';
 import { adventurer } from 'https://cdn.jsdelivr.net/npm/@dicebear/adventurer@9.2.4/lib/index.min.js';
 
 
 // --- Step 2: Set up Navigation ---
+// This code will now run because the imports above will succeed.
 const csButton = document.getElementById('cs-resume-btn');
 const cnaButton = document.getElementById('cna-resume-btn');
 
